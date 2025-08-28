@@ -1,0 +1,493 @@
+documentclass{article}
+\usepackage{listings}
+\usepackage{xcolor}
+\title{Assignment 1 (C Programming)}
+\author{patel divy 25bcl066}
+\date{\today}
+\lstset{
+  language=C,
+  backgroundcolor=\color{brown!5},
+  keywordstyle=\color{green},
+  stringstyle=\color{black},
+  commentstyle=\color{green!50!black},
+  basicstyle=\ttfamily\footnotesize,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  frame=single,
+  tabsize=4,
+  showstringspaces=false
+}
+\begin{document}
+\maketitle
+% ---------------- PROGRAM 1 ----------------
+PROGRAM 1: Add two numbers
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    int x, y, result;
+    printf("Enter two integers: ");
+    scanf("%d %d", &x, &y);
+    result = x + y;
+    printf("Addition: %d + %d = %d\n", x, y, result);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 1
+\begin{lstlisting}
+Enter two integers: 10 20
+Addition: 10 + 20 = 30
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 2 ----------------
+PROGRAM 2: Subtract two numbers
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    int num1, num2, diff;
+    printf("Enter two integers: ");
+    scanf("%d %d", &num1, &num2);
+    diff = num1 - num2;
+    printf("Result: %d - %d = %d\n", num1, num2, diff);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 2
+\begin{lstlisting}
+Enter two integers: 15 8
+Result: 15 - 8 = 7
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 3 ----------------
+PROGRAM 3: Multiply two numbers
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    int p, q;
+    printf("Provide two whole numbers: ");
+    scanf("%d %d", &p, &q);
+    printf("Multiplication: %d x %d = %d\n", p, q, p*q);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 3
+\begin{lstlisting}
+Provide two whole numbers: 12 5
+Multiplication: 12 x 5 = 60
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 4 ----------------
+PROGRAM 4: Divide two numbers
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    int dividend, divisor;
+    float quotient;
+    printf("Enter dividend and divisor: ");
+    scanf("%d %d", &dividend, &divisor);
+    quotient = (float) dividend / divisor;
+    printf("Division result: %.2f\n", quotient);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 4
+\begin{lstlisting}
+Enter dividend and divisor: 50 10
+Division result: 5.00
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 5 ----------------
+PROGRAM 5: Perform all four operations
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+    printf("Sum = %d\n", a+b);
+    printf("Difference = %d\n", a-b);
+    printf("Product = %d\n", a*b);
+    printf("Quotient = %.2f\n", (float)a/b);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 5
+\begin{lstlisting}
+Enter two integers: 20 4
+Sum = 24
+Difference = 16
+Product = 80
+Quotient = 5.00
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 6 ----------------
+PROGRAM 6: Convert hours into minutes
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    int hrs;
+    printf("Enter hours: ");
+    scanf("%d", &hrs);
+    printf("%d hours = %d minutes\n", hrs, hrs*60);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 6
+\begin{lstlisting}
+Enter hours: 3
+3 hours = 180 minutes
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 7 ----------------
+PROGRAM 7: Convert minutes into hours
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    int minutes;
+    printf("Enter time in minutes: ");
+    scanf("%d", &minutes);
+    printf("%d minutes = %d hour(s)\n", minutes, minutes/60);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 7
+\begin{lstlisting}
+Enter time in minutes: 120
+120 minutes = 2 hour(s)
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 8 ----------------
+PROGRAM 8: Convert dollars to rupees (1 dollar = 87.3 INR)
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float usd, inr;
+    printf("Enter amount in USD: ");
+    scanf("%f", &usd);
+    inr = usd * 87.3;
+    printf("%.2f USD = %.2f INR\n", usd, inr);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 8
+\begin{lstlisting}
+Enter amount in USD: 10
+10.00 USD = 873.00 INR
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 9 ----------------
+PROGRAM 9: Convert rupees to dollars
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float rupees, dollars;
+    printf("Enter money in INR: ");
+    scanf("%f", &rupees);
+    dollars = rupees / 87.3;
+    printf("%.2f INR = %.2f USD\n", rupees, dollars);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 9
+\begin{lstlisting}
+Enter money in INR: 873
+873.00 INR = 10.00 USD
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 10 ----------------
+PROGRAM 10: Dollars to Pounds
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float usd, gbp;
+    printf("Enter value in dollars: ");
+    scanf("%f", &usd);
+    gbp = (usd * 87.3) / 118;
+    printf("%.2f USD = %.2f GBP\n", usd, gbp);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 10
+\begin{lstlisting}
+Enter value in dollars: 10
+10.00 USD = 7.40 GBP
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 11 ----------------
+PROGRAM 11: Convert grams into kilograms
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float grams, kg;
+    printf("Enter weight (in grams): ");
+    scanf("%f", &grams);
+    kg = grams / 1000.0;
+    printf("%.2f g = %.3f kg\n", grams, kg);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 11
+\begin{lstlisting}
+Enter weight (in grams): 1500
+1500.00 g = 1.500 kg
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 12 ----------------
+PROGRAM 12: Convert kilograms into grams
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float kilograms, grams;
+    printf("Enter mass in kg: ");
+    scanf("%f", &kilograms);
+    grams = kilograms * 1000;
+    printf("%.2f kg = %.0f g\n", kilograms, grams);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 12
+\begin{lstlisting}
+Enter mass in kg: 2
+2.00 kg = 2000 g
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 13 ----------------
+PROGRAM 13: Convert bytes into KB, MB, GB
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    double bytes;
+    printf("Enter memory (in Bytes): ");
+    scanf("%lf", &bytes);
+    printf("%.0lf Bytes = %.2lf KB\n", bytes, bytes/1024);
+    printf("%.0lf Bytes = %.2lf MB\n", bytes, bytes/(1024*1024));
+    printf("%.0lf Bytes = %.2lf GB\n", bytes, bytes/(1024*1024*1024));
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 13
+\begin{lstlisting}
+Enter memory (in Bytes): 1048576
+1048576 Bytes = 1024.00 KB
+1048576 Bytes = 1.00 MB
+1048576 Bytes = 0.00 GB
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 14 ----------------
+PROGRAM 14: Celsius to Fahrenheit
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float c, f;
+    printf("Input temperature (C): ");
+    scanf("%f", &c);
+    f = (c * 9 / 5) + 32;
+    printf("Temperature in Fahrenheit: %.2f F\n", f);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 14
+\begin{lstlisting}
+Input temperature (C): 37
+Temperature in Fahrenheit: 98.60 F
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 15 ----------------
+PROGRAM 15: Fahrenheit to Celsius
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float f, c;
+    printf("Input temperature (F): ");
+    scanf("%f", &f);
+    c = (f - 32) * 5 / 9;
+    printf("Temperature in Celsius: %.2f C\n", c);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 15
+\begin{lstlisting}
+Input temperature (F): 212
+Temperature in Celsius: 100.00 C
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 16 ----------------
+PROGRAM 16: Simple Interest calculation
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float principal, rate, time, si;
+    printf("Enter P, R, T: ");
+    scanf("%f %f %f", &principal, &rate, &time);
+    si = (principal * rate * time) / 100.0;
+    printf("Simple Interest = %.2f\n", si);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 16
+\begin{lstlisting}
+Enter P, R, T: 1000 5 2
+Simple Interest = 100.00
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 17 ----------------
+PROGRAM 17: Area and Perimeter of a Square
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    int side;
+    printf("Enter square side: ");
+    scanf("%d", &side);
+    printf("Perimeter = %d units\n", 4*side);
+    printf("Area = %d sq.units\n", side*side);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 17
+\begin{lstlisting}
+Enter square side: 5
+Perimeter = 20 units
+Area = 25 sq.units
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 18 ----------------
+PROGRAM 18: Area and Perimeter of Rectangle
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    int length, breadth;
+    printf("Enter length and breadth: ");
+    scanf("%d %d", &length, &breadth);
+    printf("Perimeter = %d units\n", 2*(length+breadth));
+    printf("Area = %d sq.units\n", length*breadth);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 18
+\begin{lstlisting}
+Enter length and breadth: 10 20
+Perimeter = 60 units
+Area = 200 sq.units
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 19 ----------------
+PROGRAM 19: Area of a Circle
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float r, area;
+    const float PI = 3.1416;
+    printf("Enter radius: ");
+    scanf("%f", &r);
+    area = PI * r * r;
+    printf("Circle area = %.2f\n", area);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 19
+\begin{lstlisting}
+Enter radius: 7
+Circle area = 153.94
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 20 ----------------
+PROGRAM 20: Area of Triangle
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float b, h;
+    printf("Enter base and height: ");
+    scanf("%f %f", &b, &h);
+    printf("Triangle area = %.2f\n", 0.5*b*h);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 20
+\begin{lstlisting}
+Enter base and height: 10 5
+Triangle area = 25.00
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 21 ----------------
+PROGRAM 21: Net Salary (Allowance 10%, Deduction 3%)
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float gross, net;
+    printf("Enter gross salary: ");
+    scanf("%f", &gross);
+    net = gross + (0.10*gross) - (0.03*gross);
+    printf("Net Salary = %.2f\n", net);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 21
+\begin{lstlisting}
+Enter gross salary: 15000
+Net Salary = 16050.00
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 22 ----------------
+PROGRAM 22: Net sales after discount 10%
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float gross, net;
+    printf("Enter gross sales: ");
+    scanf("%f", &gross);
+    net = gross - (gross*0.10);
+    printf("Final sales after 10%% discount = %.2f\n", net);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 22
+\begin{lstlisting}
+Enter gross sales: 2000
+Final sales after 10% discount = 1800.00
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 23 ----------------
+PROGRAM 23: Average of three subjects
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    float s1, s2, s3;
+    printf("Enter marks of 3 subjects: ");
+    scanf("%f %f %f", &s1, &s2, &s3);
+    printf("Total = %.2f\n", s1+s2+s3);
+    printf("Average = %.2f\n", (s1+s2+s3)/3);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 23
+\begin{lstlisting}
+Enter marks of 3 subjects: 50 60 70
+Total = 180.00
+Average = 60.00
+=== Code Execution Successful ===
+\end{lstlisting}
+% ---------------- PROGRAM 24 ----------------
+PROGRAM 24: Swap two values
+\begin{lstlisting}
+#include <stdio.h>
+int main() {
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    printf("Before: a=%d, b=%d\n", a, b);
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    printf("After: a=%d, b=%d\n", a, b);
+    return 0;
+}
+\end{lstlisting}
+\maketitle Output 24
+\begin{lstlisting}
+Enter two numbers: 10 20
+Before: a=10, b=20
+After: a=20, b=10
+=== Code Execution Successful ===
+\end{lstlisting}
+\end{document}
+
+
